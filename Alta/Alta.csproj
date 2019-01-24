@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Configuracion.cs" />
+    <Compile Include="EscritorUsuarioEjercicioPedido.cs" />
     <Compile Include="EscritorUsuarioSQL.cs" />
     <Compile Include="EscritorUsuarioTexto.cs" />
     <Compile Include="Form1.cs">
