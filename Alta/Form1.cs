@@ -27,8 +27,15 @@ namespace Alta
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            var usuario = new UsuarioDTO(txtNombre.Text, txtApellido.Text);            
-            escritorUsuario.escribirUsuario(usuario);
+            try
+            {
+                var usuario = new UsuarioDTO(txtNombre.Text, txtApellido.Text);
+                escritorUsuario.escribirUsuario(usuario);
+                MessageBox.Show("Se dio de alta");
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

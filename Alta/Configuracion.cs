@@ -9,8 +9,10 @@ namespace Alta
     public class Configuracion
     {
         public static IEscritorUsuario obtenerEstrategia() {
-            // return new EscritorUsuarioSQL(new Conexion().crearConexion());
-            return new EscritorUsuarioTexto();
+            return new EscritorUsuarioEjercicioPedido(
+                new EscritorUsuarioTexto(),
+                new EscritorUsuarioSQL(new Conexion().crearConexion())
+            );
         }
     }
 }
